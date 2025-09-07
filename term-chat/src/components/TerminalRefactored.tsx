@@ -22,12 +22,12 @@ const Terminal = ({ onAuthenticated }: TerminalProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Custom hooks
-  const { colorTheme, customThemes, cycleColorTheme, getThemeClasses, createCustomTheme, getAvailableThemes } = useTheme();
+  const { colorTheme, customThemes, cycleColorTheme, getThemeClasses, createCustomTheme } = useTheme();
   const { alignment, cycleAlignment, getAlignmentClasses } = useAlignment();
   const { isAuthenticated, username, currentPrompt, inputType, login, logout, handleAuthInput } = useAuthentication();
 
   // AI Response simulation
-  const simulateAIResponse = (userInput: string) => {
+  const simulateAIResponse = (_userInput: string) => {
     setTimeout(() => {
       const responses = [
         "I understand your query. Let me process that information...",
@@ -89,7 +89,7 @@ const Terminal = ({ onAuthenticated }: TerminalProps) => {
   };
 
   // Command handler
-  const { isTyping, setIsTyping, handleCommand } = useCommandHandler({
+  const { isTyping, handleCommand } = useCommandHandler({
     isAuthenticated,
     username,
     colorTheme,

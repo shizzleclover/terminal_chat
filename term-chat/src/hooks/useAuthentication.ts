@@ -5,7 +5,7 @@ import { createSystemMessage } from '../utils/commands';
 export const useAuthentication = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [, setPassword] = useState('');
   const [currentPrompt, setCurrentPrompt] = useState('login: ');
   const [inputType, setInputType] = useState<InputType>('username');
 

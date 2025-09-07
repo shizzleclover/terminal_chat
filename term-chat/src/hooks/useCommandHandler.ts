@@ -29,7 +29,7 @@ export const useCommandHandler = ({
 }: UseCommandHandlerProps) => {
   const [isTyping, setIsTyping] = useState(false);
 
-  const handleCommand = useCallback((command: string, currentPrompt: string): Message[] => {
+  const handleCommand = useCallback((command: string, _currentPrompt: string): Message[] => {
     const messages: Message[] = [];
 
     // Handle system commands

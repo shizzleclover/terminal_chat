@@ -8,7 +8,7 @@ interface MessageDisplayProps {
   username: string;
 }
 
-const MessageDisplay = ({ messages, currentPrompt, isAuthenticated, username }: MessageDisplayProps) => {
+const MessageDisplay = ({ messages, currentPrompt }: MessageDisplayProps) => {
   return (
     <AnimatePresence>
       {messages.map((message, index) => (
