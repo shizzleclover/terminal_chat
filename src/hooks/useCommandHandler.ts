@@ -26,6 +26,7 @@ export const useCommandHandler = ({
   onCreateCustomTheme,
   onLogout,
   onAIResponse
+  
 }: UseCommandHandlerProps) => {
   const [isTyping, setIsTyping] = useState(false);
 
